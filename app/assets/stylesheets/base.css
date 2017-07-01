@@ -93,9 +93,10 @@ main {
 }
 
 .container {
+  position: relative;
   width: 100%;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 15px auto;
   padding: 0 20px;
 }
 
@@ -107,7 +108,26 @@ main {
   background-color: #fff;
   text-align: center;
 }
-
+.info-bar a.icon-face {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("facebook.png");
+}
+.info-bar a.icon-yelp {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("yelp.png");
+}
 /* ============================================================
   HEADER & SITE TITLE
 ============================================================ */

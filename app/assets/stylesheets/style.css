@@ -77,6 +77,7 @@ section.module.parallax-3 {
   right: 1em;
 }
 #headertext{
+  position: absolute;
   font-size: 40px;
   text-align: left;
   margin-left: 40px;
