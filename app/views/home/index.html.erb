@@ -14,6 +14,36 @@
 
   <!-- js -->
   <script src="assets/modernizr.js"></script>
+  <script type="text/javascript">
+    /* resize the image(s) on page load */
+    $(document).ready(function() {
+      resize_all_parallax();
+    });
+
+    /* resize the image(s) on page resize */
+    $(window).on('resize', function(){
+      resize_all_parallax();
+    });
+
+    /* keep all of your resize function calls in one place so you don't have to edit them twice (on page load and resize) */
+    function resize_all_parallax() {
+      var div_id = 'img1'; /* the ID of the div that you're resizing */
+      var img_w = 1000; /* the width of your image, in pixels */
+      var img_h = 864; /* the height of your image, in pixels */
+      resize_parallax(div_id,img_w,img_h);
+    }
+
+    /* this resizes the parallax image down to an appropriate size for the viewport */
+    function resize_parallax(div_id,img_w,img_h) {
+      var div = $('#' + div_id);
+      var divwidth = div.width();
+      if (divwidth < 769) { var pct = (img_h/img_w) * 105; } /* show full image, plus a little padding, if on static mobile view */
+      else { var pct = 60; } /* this is the HEIGHT as percentage of the current div WIDTH. you can change it to show more (or less) of your image */
+      var newheight = Math.round(divwidth * (pct/100));
+      newheight = newheight  + 'px';
+      div.height(newheight);
+    }
+  </script>
 </head>
 
 <body>
@@ -21,20 +51,20 @@
   <div class="wrapper">
   <div class="info-bar">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="col-xs-6 col-sm-6 col-md-6">
         <h1 id="headertext">
           <span class="mychangecolor"> Naked</span>
           nails
         </h1>
       </div>
+      <div class="col-xs-6 col-sm-6 col-md-6">
+        <a id="bookbtn" target="_blank" href="https://my.setmore.com/bookanappointmentv3.do?uniqueKey=a7b79ae1-8af2-44ce-af18-0204b814dc7f" role="button">Book now</a>
+      </div>
     </div>
   </div>
 
     <main>
-        
-        <section class="module parallax parallax-1">
-        </section>
-
+        <div class="parallax_img_1" id="img1"></div>
         <section class="module content">
           <div class="container">
             <h2>Do you feel 
@@ -127,8 +157,7 @@
             </table>
           </div>
         </section>
-        
-        <section class="module parallax parallax-2 img-fluid"></section>
+        <div class="parallax_img_2" id="img1"></div>
           <section class="module content">
           <div class="container">
             <h2 style="text-align: center;">Leg is where you carry all of your weight so let us lighten that load for you with our feet pimpin.</h2>
@@ -206,7 +235,7 @@
             </table>
           </div>
         </section>
-        <section class="module parallax parallax-3"></section>
+        <div class="parallax_img_3" id="img1"></div>
         <section class="module content">
         <div class="container">
           <h2 style="text-align: center; margin-bottom: 0px;">Do you like matching things?</h2>
@@ -299,7 +328,7 @@
               </table>
             </div>
       </section>
-      <section class="module parallax parallax-4"></section>
+      <div class="parallax_img_4" id="img1"></div>
       <section class="module content">
         <div class="container">
           <h2 style="text-align: center;">Some hair belongs on a body but some hair at the wrong place at wrong time. Hair control WAX!</h2>
@@ -377,7 +406,7 @@
           </table>
         </div>
       </section>
-      <section class="module parallax parallax-5"></section>
+      <div class="parallax_img_5" id="img1"></div>
       <section class="module content">
         <div class="container">
           <h2 style="text-align: center;">Flouting like a flower in a river, close your eyes and feel the stress fly away.</h2>
@@ -468,8 +497,8 @@
       </div>
       <div class="row" style="background-color: #b7b7b7">
         <div class="col-xs-6 col-sm-6 col-md-6" style="padding: 50px;">
-          <h1 id="headertext">Naked nail</h1>
-          <p>2017 NAKED NAIL SALON. ALL RIGHTS RESERVED.</p>
+          <h1 id="footertext">Naked nail</h1>
+          <p id="copyright">2017 NAKED NAIL SALON. ALL RIGHTS RESERVED.</p>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6">
           <h1>Logos here</h1>
