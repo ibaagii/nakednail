@@ -92,7 +92,7 @@ main {
   background-color: #fff;
 }
 
-.container {
+.containerbase {
   position: relative;
   width: 100%;
   max-width: 960px;
