@@ -21,6 +21,11 @@ section.module p:last-child {
 section.module.content {
   padding: 40px 0;
 }
+@media screen and (max-width: 768px) {
+  section.module.parallax { 
+    background-attachment: inherit;
+  }
+}
 section.module.parallax {
   height: 600px;
   background-position: 50% 50%;
@@ -47,7 +52,13 @@ section.module.parallax-2 {
   background-image: url("pedicure.png");
 }
 section.module.parallax-3 {
-  background-image: url("3.jpg");
+  background-image: url("manipedi.png");
+}
+section.module.parallax-4 {
+  background-image: url("wax.png");
+}
+section.module.parallax-5 {
+  background-image: url("massage.png");
 }
 
 @media all and (min-width: 600px) {
@@ -76,13 +87,9 @@ section.module.parallax-3 {
   top: 1em;
   right: 1em;
 }
-#headertext{
-  position: absolute;
-  font-size: 40px;
-  text-align: left;
-  margin-left: 40px;
-  color: #000000;
+#headertext, #footertext{
   font-family: 'Abril Fatface', cursive;
+  text-align: center;
 }
 td{
   padding: 20px;
@@ -96,4 +103,104 @@ td{
   text-align: left;
   color: black;
   font-size: 29px;
+}
+#massage{
+  padding: 16px;
+  margin-left: 20px;
+}
+#bookbtn{
+  top: 85%;
+  text-align: center;
+  color: #000;
+  border: 1px solid #000;
+}
+#socialbtn{
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding: 5%;
+}
+#copyright{
+  font-size: x-small; 
+  text-align: center;
+  margin-left: 0;
+}
+@media all and (min-width: 768px) {
+  #bookbtn {
+    padding: 10px;
+    border: 1px solid #000;
+    top: 15px;
+    margin: 0;
+    position: fixed;
+    right: 20px;
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    color: #000;
+  }
+  #headertext{
+    padding: 20px;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 40px;
+    color: #000000;
+    font-family: 'Abril Fatface', cursive;
+  }
+  #footertext{
+    font-size: 40px;
+    text-align: left;
+    margin-left: 40px;
+    color: #000000;
+    font-family: 'Abril Fatface', cursive;
+  }
+  #copyright{
+    text-align: left;
+    margin-left: 20px;
+  }
+}
+.parallax_img_1 {
+  background-image: url('nail.png');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.parallax_img_2 {
+  background-image: url('pedicure.png');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.parallax_img_3 {
+  background-image: url('manipedi.png');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.parallax_img_4 {
+  background-image: url('wax.png');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.parallax_img_3 {
+  background-image: url('massage.png');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+@media screen and (max-width: 768px) {
+  .parallax_img { 
+    background-attachment: inherit;
+  }
 }

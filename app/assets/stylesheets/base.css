@@ -92,7 +92,7 @@ main {
   background-color: #fff;
 }
 
-.container {
+.containerbase {
   position: relative;
   width: 100%;
   max-width: 960px;
@@ -218,7 +218,7 @@ header .social a:hover {
   FOOTER
 ============================================================ */
 footer {
-  background-color: #ffffff;
+  background-color: yellow;
   padding: 20px 0;
 }
 footer .asides {
