@@ -114,6 +114,12 @@ td{
   color: #000;
   border: 1px solid #000;
 }
+#socialbtn{
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding: 5%;
+}
 #copyright{
   font-size: x-small; 
   text-align: center;
