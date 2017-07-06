@@ -17,7 +17,6 @@ gem 'coffee-rails', '~> 4.1.0'
 
 #bootstrap
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
-gem 'jquery-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -35,8 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-# gem 'rails_12factor', group: :production
+gem 'capistrano-rails', group: :development
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
