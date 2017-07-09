@@ -17,7 +17,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 #bootstrap
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
-
+#haml
+gem 'haml'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
